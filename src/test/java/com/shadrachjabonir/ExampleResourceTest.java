@@ -18,4 +18,13 @@ public class ExampleResourceTest {
              .body(is("hello"));
     }
 
+    @Test
+    public void testPing() {
+        given()
+                .when().get("/ping")
+                .then()
+                .statusCode(200)
+                .body(is("pong"));
+    }
+
 }
